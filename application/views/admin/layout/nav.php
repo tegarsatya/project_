@@ -114,6 +114,31 @@
 				</li>
 			</ul>
 		</li>
+
+		<li class="nav-item has-treeview">
+			<a href="#" class="nav-link">
+				<i class="nav-icon fas fa-users"></i>
+				<p>
+					Manajemen admin
+					<i class="fas fa-angle-left right"></i>
+				</p>
+			</a>
+			<ul class="nav nav-treeview">
+				<li class="nav-item">
+					<a href="<?= base_url('admin/user') ?>" class="nav-link">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Data admin Aktif</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('admin/user/tambah') ?>" class="nav-link">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Tambah Admin</p>
+					</a>
+				</li>
+			</ul>
+		</li>
+
 		<li class="nav-item">
 			<a href="<?php echo base_url('login/logout') ?>" class="nav-link">
 				<i class="nav-icon fa fa-sign-out-alt"></i>
@@ -144,3 +169,28 @@
 </div>
 <!-- /.sidebar -->
 </aside>
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1><?php echo $title ?></h1>
+				</div>
+				<div class="col-sm-6">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item"><a href=<?php echo base_url('admin/dasbor') ?>">Dasbor</a></li>
+						<li class="breadcrumb-item"><a href="<?php echo base_url('admin/' . $this->uri->segment(2)) ?>"><?php echo ucfirst(str_replace('_', ' ', $this->uri->segment(2))) ?></a></li>
+						<li class="breadcrumb-item active"><?php echo $title ?></li>
+					</ol>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</section>
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<!-- /.card-header -->
+					<div class="card-body">

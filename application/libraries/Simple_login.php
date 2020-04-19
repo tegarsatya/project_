@@ -73,14 +73,11 @@ class Simple_login
 	}
 
 	// Fungsi check login: seseorang sudah login atau belum
-	public function cek_login($pengalihan)
+	public function cek_login()
 	{
-		// Check status login (kita ambil status username dan akses level)
-		if($this->CI->session->userdata('username') == "" && 
-			$this->CI->session->userdata('akses_level') == "")
-		{
-			$this->CI->session->set_flashdata('warning', 'Anda belum login');
-			redirect(base_url('login'),'refresh');
+		if ($this->CI->session->userdata('username') == '' && $this->CI->session->userdata('akses_level') == '') {
+			$this->CI->session->set_flashdata('sukses', 'Oops...silakan login dulu');
+			redirect(base_url('login'));
 		}
 	}
 }
