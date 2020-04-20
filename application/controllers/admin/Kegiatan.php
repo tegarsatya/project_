@@ -7,10 +7,10 @@ class Kegiatan extends CI_Controller {
 	public function index()
 	{
 		$data =array(
-			'title'			=>'Halaman Kekegiatan Admin',
+			'title'			=>'Halaman Kegiatan Admin',
 			'isi'			=>'admin/kegiatan/list'
 		);
-		$this->load->view('layout/wrapper', $data, FALSE);
+		$this->load->view('admin/layout/wrapper', $data, FALSE);
 	}
 
 }

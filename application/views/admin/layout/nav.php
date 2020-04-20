@@ -21,13 +21,13 @@
 			</a>
 			<ul class="nav nav-treeview">
 				<li class="nav-item">
-					<a href="../charts/chartjs.html" class="nav-link">
+					<a href="<?= base_url('admin/kegiatan')?>" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
 						<p>Data Kegiatan</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="../charts/chartjs.html" class="nav-link">
+					<a href="<?= base_url('admin/kegiatan/tambah')?>" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
 						<p>Tambah Data kegiatan</p>
 					</a>
@@ -44,13 +44,13 @@
 			</a>
 			<ul class="nav nav-treeview">
 				<li class="nav-item">
-					<a href="../charts/chartjs.html" class="nav-link">
+					<a href="<?= base_url('admin/struktur')?>" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
 						<p>Data Struktur Organisasi</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="../charts/chartjs.html" class="nav-link">
+					<a href="<?= base_url('admin/struktur/tambah')?>" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
 						<p>Tambah Data Struktu</p>
 					</a>
