@@ -97,6 +97,31 @@
 				</li>
 			</ul>
 		</li>
+
+		<li class="nav-item has-treeview">
+			<a href="#" class="nav-link">
+				<i class="nav-icon fas fa-tree"></i>
+				<p>
+					Redaksi
+					<i class="fas fa-angle-left right"></i>
+				</p>
+			</a>
+			<ul class="nav nav-treeview">
+				<li class="nav-item">
+					<a href="../UI/general.html" class="nav-link">
+						<i class="far fa-circle nav-icon"></i>
+						<p>General</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="../UI/icons.html" class="nav-link">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Icons</p>
+					</a>
+				</li>
+			</ul>
+		</li>
+
 		<li class="nav-item has-treeview">
 			<a href="#" class="nav-link">
 				<i class="nav-icon fas fa-edit"></i>
@@ -114,6 +139,31 @@
 				</li>
 			</ul>
 		</li>
+
+		<li class="nav-item has-treeview">
+			<a href="#" class="nav-link">
+				<i class="nav-icon fas fa-th"></i>
+				<p>
+					Manajemen Video
+					<i class="fas fa-angle-left right"></i>
+				</p>
+			</a>
+			<ul class="nav nav-treeview">
+				<li class="nav-item">
+					<a href="<?= base_url('admin/video') ?>" class="nav-link">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Data Video</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?= base_url('admin/video/tambah') ?>" class="nav-link">
+						<i class="far fa-circle nav-icon"></i>
+						<p>Tambah Video</p>
+					</a>
+				</li>
+			</ul>
+		</li>
+
 
 		<li class="nav-item has-treeview">
 			<a href="#" class="nav-link">
