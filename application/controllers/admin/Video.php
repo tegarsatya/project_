@@ -25,7 +25,6 @@ class Video extends CI_Controller {
 	// Tambah Video
 	public function tambah()
 	{
-
 		// Validasi
 		$valid = $this->form_validation;
 		$valid->set_rules(
@@ -41,6 +40,14 @@ class Video extends CI_Controller {
 			'required',
 			array('required' => 'Video harus diisi')
 		);
+
+		$valid->set_rules(
+			'posisi',
+			'Posisi',
+			'required',
+			array('required' => 'Posisi harus diisi')
+		);
+		
 
 		if ($valid->run() === FALSE) {
 			// End validasi
@@ -58,7 +65,8 @@ class Video extends CI_Controller {
 				'posisi'		=> $i->post('posisi'),
 				'keterangan'	=> $i->post('keterangan'),
 				'video'			=> $i->post('video'),
-				'id_user'		=> $this->session->userdata('id')
+				'urutan'		=> $i->post('urutan'),
+				'id_user'		=> $this->session->userdata('id_user')
 			);
 			$this->video_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Video telah ditambah');
@@ -86,6 +94,13 @@ class Video extends CI_Controller {
 			'Video',
 			'required',
 			array('required' => 'Video harus diisi')
+		);
+
+		$valid->set_rules(
+			'posisi',
+			'Posisi',
+			'required',
+			array('required' => 'Posisi harus diisi')
 		);
 
 		if ($valid->run() === FALSE) {
