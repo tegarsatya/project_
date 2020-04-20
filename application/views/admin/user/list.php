@@ -25,7 +25,7 @@ echo form_open(base_url('admin/user/proses'));
 			// Looping data user dg foreach
 			$i = 1;
 			foreach ($user as $user) {
-			?>
+				?>
 				<tr>
 					<td><?php echo $i ?></td>
 					<td><?php echo $user->nama ?></td>
@@ -40,8 +40,8 @@ echo form_open(base_url('admin/user/proses'));
 					</td>
 				</tr>
 			<?php $i++;
-			} //End loopin
-			?>
+				} //End loopin
+				?>	
 		</tbody>
 	</table>
 </div>

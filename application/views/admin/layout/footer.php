@@ -81,7 +81,6 @@
 				dangerMode: true,
 			})
 			.then((willDelete) => {
-				// redirect with javascript here as per your logic after showing the alert using the urlToRedirect value
 				if (willDelete) {
 					// Proses ke URL
 					window.location.href = urlToRedirect;
@@ -131,7 +130,7 @@
 			});
 	}
 </script>
-
+							</div>
 					</div>
 					<!-- /.card-body -->
 				</div>

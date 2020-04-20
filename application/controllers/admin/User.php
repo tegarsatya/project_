@@ -89,57 +89,63 @@ class User extends CI_Controller {
 	// Edit User
 	public function edit($id_user)
 	{
-		$user = $this->user_model->detail($id_user);
+		$user 		= $this->user_model->detail($id_user);
 
 		// Validasi
-		$valid = $this->form_validation;
-		$valid->set_rules(
+		$validasi = $this->form_validation;
+
+		$validasi->set_rules(
 			'nama',
-			'Nama',
+			'Nama User',
 			'required',
-			array('required' => 'Nama harus diisi')
+			array('required'		=> '%s harus diisi')
 		);
 
-		$valid->set_rules(
-			'email',
-			'Email',
+		$validasi->set_rules(
+			'username',
+			'Username',
 			'required',
-			array('required' => 'email harus diisi')
+			array('required'		=> '%s harus diisi')
 		);
 
-
-		$valid->set_rules(
+		$validasi->set_rules(
 			'password',
 			'Password',
 			'required',
-			array('required' => 'Password harus diisi')
+			array('required'		=> '%s harus diisi')
 		);
 
-		if ($valid->run() === FALSE) {
+		if ($validasi->run() === FALSE) {
 			// End validasi
 
 			$data = array(
-				'title' 	=> 'Edit User',
-				'user'	=> $user,
-				'isi' 	=> 'admin/user/edit'
+				'title'		=> 'Edit User: ' . $user->nama,
+				'user'		=> $user,
+				'isi'		=> 'admin/user/edit'
 			);
-			$this->load->view('admin/layout/wrapper', $data);
-			// masuk database
+			$this->load->view('admin/layout/wrapper', $data, FALSE);
+			// Masuk ke database
 		} else {
-			$i = $this->input;
+			$inp = $this->input;
+
 			$data = array(
-				'nama'			=> 	$i->post('nama'),
-				'email'			=>	$i->post('email'),
-				'username'		=>	$i->post('username'),
-				'password'		=>	$i->post('password'),
-				'akses_level'	=> $i->post('akses_level')
+				'id_user'		=> $id_user,
+				'id_bagian'		=> $inp->post('id_bagian'),
+				'nama'		=> $inp->post('nama'),
+				'email'			=> $inp->post('email'),
+				'username'		=> $inp->post('username'),
+				'password'		=> sha1($inp->post('password')),
+				'akses_level'	=> $inp->post('akses_level'),
+				'keterangan'	=> $inp->post('keterangan'),
+				'tanggal_post'	=> date('Y-m-d H:i:s')
 			);
-			$this->user_model->edit($data, $id_user);
-			$this->session->set_flashdata('sukses', 'user telah ditambah');
-			redirect(base_url('admin/user'));
+			$this->user_model->edit($data);
+			$this->session->set_flashdata('sukses', 'Data telah diupdate');
+			redirect(base_url('admin/user'), 'refresh');
 		}
 		// End masuk database
 	}
+
 
 	// Delete User
 	public function delete($id_user)
