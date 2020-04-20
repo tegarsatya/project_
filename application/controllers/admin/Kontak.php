@@ -2,17 +2,17 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kegiatan extends CI_Controller {
+class Kontak extends CI_Controller {
 
 	public function index()
 	{
-		$data =array(
-			'title'			=>'Halaman Kekegiatan Admin',
-			'isi'			=>'admin/kegiatan/list'
+		$data = array(
+			'title'		=>'Halaman Kontak Admin',
+			'isi'		=>'admin/kontak/list'
 		);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
 }
 
-/* End of file Kegiatan.php */
+/* End of file Kontak.php */

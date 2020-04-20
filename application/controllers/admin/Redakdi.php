@@ -1,18 +1,17 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kegiatan extends CI_Controller {
+class Redaksi extends CI_Controller {
 
 	public function index()
 	{
-		$data =array(
-			'title'			=>'Halaman Kekegiatan Admin',
-			'isi'			=>'admin/kegiatan/list'
+		$data = array(
+			'title'			=> 'Halaman Redaksi Admin',
+			'isi'			=> 'admin/redaksi/list'
 		);
 		$this->load->view('layout/wrapper', $data, FALSE);
 	}
 
 }
 
-/* End of file Kegiatan.php */
+/* End of file Redaksi php */
