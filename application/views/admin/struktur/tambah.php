@@ -57,14 +57,16 @@ echo form_open(base_url('admin/struktur/tambah'));
 			<label>Upload gambar</label>
 			<input type="file" name="gambar" class="form-control">
 		</div>
+	</div>
 
+	<div class="col-md-12">
 		<div class="form-group">
 			<label>Keterangan</label>
 			<textarea name="isi" class="form-control" placeholder="Keterangan" id="keterangan"><?php echo set_value('isi') ?></textarea>
 		</div>
 	</div>
 	<div class="form-group">
-		<input type="submit" name="submit" value="Save Struktur" class="btn btn-success btn-lg">
+		<input type="submit" name="submit" value="save_struktur" class="btn btn-success btn-lg">
 		<input type="reset" name="reset" value="Reset" class="btn btn-primary btn-lg">
 	</div>
 </div>
